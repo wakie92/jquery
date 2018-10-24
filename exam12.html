@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- <style>
+	div{
+		width:100px;
+		height:100px;
+		background-color: res;
+	}
+</style> -->
+<script src = "lib/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#div01").css({
+			"width" : "100px",
+			"height" : "100px",
+			"background-color": "red",
+			"position" : "absolute"
+		})
+		
+		//$("div").animate({JSON},duration);
+		//j쿼리의 애니메이션 효과는  어떤 브라우져에서도 호환이된다.
+		$("#div01").animate({
+			"width": "+=300px",
+			"height" : "-+300px",
+			"left" : "100px",
+			"top" : "200px",
+			"opacity" : "0.2"
+		},3000);
+		
+		
+	})
+
+</script>
+</head>
+<body>
+<!-- 100x100  빨간색 사각형 -->
+		<!-- <div style ="width:100; height:100; background-color: red"></div> -->
+		<div id="div01"> </div>
+</body>
+</html>

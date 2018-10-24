@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<style>
+	
+</style>
+<script>
+$(document).ready(function(){
+    $('.slider').bxSlider({
+    	auto: true,
+    	  autoControls: true,
+    	  stopAutoOnClick: true,
+    	  pager: false,
+    	  mode : 'horizontal',
+        captions: true,
+        slideWidth: 1028
+    });
+  });
+
+  </script>
+</head>
+<body>
+<div class="slider">
+    <div><img src="../img/다운로드.jpg"></div>
+    <div><img src="../img/Koala.jpg" title = "Koala"> I am another slide.</div>
+    <div><img src="../img/WIN_vista.jpg" title = "vist">  I am another slide.</div>
+    <div><img src="../img/Chrysanthemum.jpg"> I am another slide.</div>
+  </div>
+</body>
+</html>

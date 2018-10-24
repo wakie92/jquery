@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+	<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<style>
+	#div1{
+		position : relative;
+		width :200px;
+		height : 200px;
+		background-color: red;
+	}
+</style>
+<script>
+	$(document).ready(function(){
+		
+		$('div').animate({
+			"left": "300px"
+		}, 2000);
+		
+		$('div').animate({
+			'left' : "0px"
+			,'width' : 'toggle'
+		}, 2000);
+		
+		$('div').animate({
+			'top' : "200px"
+			,'width' : 'toggle'
+		}, 2000);
+		
+		$('div').animate({
+			'top' : "0px"
+		}, 2000);
+		
+		$('div').animate({
+			'top' : "200px",
+			'left' : '200px',
+			'width' : '80px',
+			'height' : '80px'
+		}, 2000,function(){
+			$('div').css('background-color', 'blue');
+		});
+//이렇게 하지않으면 움직이는 도중에 파랑색으로 색깔이 바뀐다. 애니메이션이 끝나고나서  색을 바꾸는 코드를 읽게 만들기 위해서는
+// 2000뒤에 콜백함수를 넣어주면 된다. 
+	});
+
+</script>
+</head>
+<body>
+	<div id = "div1"></div>
+</body>
+</html>

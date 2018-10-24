@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src ="/lib/jquery-3.3.1.js">
+		//콘솔내에 자바스크립트문법과 jquery의 차이 보기 
+	$(document).ready(fucntion(){
+		//$('h1').hide(); 
+		$('#id01').hide();   //display : none;
+		$('.class01').hide();
+		$('h2.class01').hide();
+		$('h1.first').hide();
+		$('h1.last').hide();
+		$('body*').hide();
+	});
+
+
+</script>
+</head>
+<body>
+	<h1 id = "id01">Hello</h1>
+	<h1 id = "id02">Hi</h1>
+	<h1 id = "id03">안녕하세요</h1>
+	<hr>
+	<h1 class = "class01">Hello</h1>
+	<h1 class = "class02">Hi</h1>
+	<h2 class = "class01">안녕하세요</h2>
+	<hr>
+</body>
+</html>

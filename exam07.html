@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	
+</style>
+<script src = "lib/jquery-3.3.1.js"></script>
+
+<script>
+	
+	/* 
+		이벤트 관련 핸들러
+		Mouse 		: click(), dblclick(), mouseenter(), mouseleave()
+		keyboard    : kewdown(), keyup(), keypress()
+		Form        : submit(), focus(), blur()
+		window      : load(), resize(), scroll, unload
+	*/
+
+	$(document).ready(function(){
+		
+		$("div").hover(function(){{
+			$(this).css("background-color", "lightgray");
+		}},function(){
+			$(this).css("background-color", "aqua");
+		});
+		
+		
+		
+		
+		
+		
+	/* 	 보통 mouseenter 과 mouseleave는 같이쓰인다.
+		$("div").mouseenter(function(){
+			alert("!!!!");
+			$(this).css("background-color","lightgray");
+		});
+		
+		$("div").mouseleave(function(){
+			alert("leave");
+			$(this).css("background-color","olive");
+		})
+	*/
+		/* $(":button").click(function(){
+			$('h2:last').hide("fast");//시간을 정할수 있다. //fast,scroll,3000
+		}); */
+		//addEventListener 방식의 레벨 2방식
+		$("div *").dblclick(function(){
+			alert("!!!!");
+			$(this).css("background-color","yellow");
+		});
+			
+		
+		$("div *").dblclick(function(){
+			alert("!!!!");
+			$(this).hide(2000);
+		});
+			
+		
+		$(":button").click(function(){//input type과 button type모두 사용하기위해서는 (":button") 그냥사용사면 버튼태그만 사용
+			$('body > h2').hide();
+		});//돔구조 형식 트리를 생각
+		
+	});
+</script>
+</head>
+<body>
+		<h1> 첫번째 문장입니다.</h1>
+		<h2> 두번째 문장입니다.</h2>
+		<div>
+			<h3> 단락 안의문장입니다.</h3>
+			<h2> 단락 안의문장2입니다.</h2>
+		</div>
+		<h2> 세번째 문장입니다.</h2>
+		<button>클릭</button>
+		
+</body>
+</html>

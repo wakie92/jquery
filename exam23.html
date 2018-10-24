@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+img {
+	width: 200px;
+	height: 200px;
+}
+</style>
+<script  src ="lib/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		
+		/*
+		$('#btnPrev').click(function() {
+			$('img').first().appendTo("#gallery");
+		});
+		*/
+		function prevImgFunc() {
+			$('img').first().appendTo("#gallery");
+		}
+		//
+		$('#btnPrev').click(prevImgFunc);
+		
+		$('#btnNext').click(function() {
+			$('img').last().prependTo('#gallery');
+		});
+		
+		/*
+		setInterval(function() {
+			$('img').first().appendTo("#gallery");
+		}, 2000);
+		*/
+		
+		var pId = setInterval(prevImgFunc, 2000);
+		
+		$('#btnStop').click(function() {
+			clearInterval(pId);
+		});
+
+})
+</script>
+</head>
+<body>
+	<button id ="btnPrev">PREV</button>
+	<span id = "gallery">
+		<img src="img/다운로드.jpg">
+		<img src="img/Koala.jpg"> 
+		<img src="img/WIN_vista.jpg"> 
+		<img src="img/Chrysanthemum.jpg">
+	</span>
+	<button id ="btnNext">NEXT</button>
+	<button id="btnStop">STOP</button>
+	
+</body>
+</html>

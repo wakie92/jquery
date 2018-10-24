@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	//스타일로 body전체에 border값을 지정하면서 생각
+
+	$(document).ready(function(){
+		$(":button").click(function(){
+			//$('p').remove();
+			
+			//$("div").remove();
+			//$("div").empty();//내용값만 날려보냄
+		/* 	$(".clz01").remove();
+			$("p.clz01").remove();
+			$("p").remove(".clz01");
+		 */	
+			$("p").remove(".clz01, #id01");
+		});
+	});
+
+</script>
+</head>
+<body>
+	<div>
+		<p class ="clz01">나는 홍길동 입니다.</p>
+		<mark class ="clz01">나는 박길동입니다.</mark><br>
+		나는 최길동 입니다.
+		<p id = "id01">나는 강길동입니다.</p>
+	</div>
+	<p>나는 한길동입니다.</p>
+	<button> 삭제 </button>
+</body>
+</html>

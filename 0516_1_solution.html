@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="/jquery/lib/jquery-3.3.1.js"></script>
+<style>
+	.week {
+		width: 100px;
+		height: 100px;
+		float: left;
+	}
+</style>
+
+<script>
+	$(document).ready(function() {
+		//새롭게 배운부분
+		$('.week').css('background-color', function(index, color) {
+			var colors = [ 'red', 'orange', 'yellow', 'green', 'blue', 'navy', 'purple' ];
+			return colors[index];
+		});
+		
+					//새롭게 배운부분
+			$(".week").stop().hover(function() {
+				$(this).animate({
+					"width" : "120px",
+					"height" : "120px",
+					"fontSize" : "2em"
+				});
+				$(this).text($(this).text() + '요일');
+
+			}, function() {
+				$(this).stop().animate({
+					"width" : "100px",
+					"height" : "100px",
+					"fontSize" : "1em"
+				});
+				$(this).text($(this).text().substring(0, 1));
+
+			});
+		
+		
+	});
+</script>
+</head>
+<body>
+	<div class="week">월</div>
+	<div class="week" >화</div>
+	<div class="week" >수</div>
+	<div class="week" >목</div>
+	<div class="week" >금</div>
+	<div class="week" >토</div>
+	<div class="week" >일</div>
+
+</body>
+</html>

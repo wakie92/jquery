@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="lib/jquery-3.3.1.js"></script>
+<style>
+	#div01 {
+		height : 400px;
+		background-color: fuchsia;
+		display : none;
+	}
+
+</style>
+<script type="text/javascript">
+	$(document).ready(function() {
+		//$("div").hide(2000);
+		//$("div").show(2000);
+		
+		//$("div").fadeOut(2000);
+		//$("div").fadeIn(2000);
+		
+		//$("div").fadeTo(2000,0.4);//(시간,투명도(0-1))
+		$("#superDiv").hover(function(){
+			$("#div01").slideDown(2000); //메뉴같은거 할때 만든다.
+		},function(){
+			$("#div01").slideUp(2000);
+		});
+		
+		
+		$("#btn1").click(function(){
+			$("div").toggle(2000); // display : none 과 display : on을 둘다 가지고있다.
+		})
+		$("#btn2").click(function(){
+			$("div").fadeToggle(2000);
+		})
+		$("#btn3").click(function(){
+			$("#div01").slideToggle(2000);
+		})
+		
+	});
+</script>
+</head>
+<body>
+	<button id= "btn1"> button-1 </button>
+	<button id= "btn2"> button-2 </button>
+	<button id= "btn3"> button-3 </button>
+	<div id = "superDiv">
+		<h1>Hello</h1>
+	</div>
+	<div id = "div01">
+		숨겨진 div 등장
+	</div>
+</body>
+</html>

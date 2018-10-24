@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style type="text/css">
+table {
+	border: 1px solid black;
+	width: 700px;
+	height: 100px;
+	border-collapse: collapse;
+	margin: auto;
+}
+
+td {
+	border: 1px solid black;
+	padding: 0px;
+	text-align: center;
+	font-size: 1em;
+}
+</style>
+<script>
+	$(document).ready(function() {
+		$("td").hover(function() {
+			$(this).animate({
+				"width" : "130px",
+				"height" : "120px",
+				"fontSize" : "2em"
+			});
+		}, function() {
+			$(this).animate({
+				"width" : "100px",
+				"height" : "100px",
+				"fontSize" : "1em"
+			});
+		});
+
+	});
+</script>
+</head>
+<body>
+	<table>
+		<tr>
+			<td style="background-color: red">월</td>
+			<td style="background-color: orange">화</td>
+			<td style="background-color: yellow">수</td>
+			<td style="background-color: green">목</td>
+			<td style="background-color: blue">금</td>
+			<td style="background-color: darkblue">토</td>
+			<td style="background-color: purple">일</td>
+		</tr>
+
+	</table>
+</body>
+</html>

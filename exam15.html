@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+
+
+	$(document).ready(function(){
+		//var pTag = document.getElementsByTagName("p");
+		//$를 쓰는 jquery객체와 javascript객체와는 다르다.
+		
+	/* 	var pTag = document.querySelectorAll("p");
+		var html = pTag[0].innerHTML;
+		 var text = pTag[0].innerText;
+		 
+	 	 */
+	 	var html = $("p").html();//type은 스트링
+	 	var text = $("p").text();
+		 
+	 	
+		alert("html : " + html + '\n text : ' + text);
+	/* 	
+		var aTag = document.getElementsById("site");
+		var attr = aTag.getAttribute('href');
+		alert("추출된 사이트 주소  : " + attr);
+		aTag.setAttribute("href" ,"http://www.naver.com");
+	 */	
+	var attr = $("#site").attr("href");
+	alert("추출된 사이트 주소 " +attr);
+	$("#site").attr("href","http://www.naver.com");//매개변수를 한개를 쓰면 getter 두개를 쓰면 setter로 인식
+	
+	$(":button").click(function(){
+		var id = $("#id").val();
+		alert("추출된 id : " + id);
+	});
+	
+	
+	});
+	
+	function clickBtn(){
+		var inputTag = document.getElementById("id");
+		var inputTag =document.querySelector("#id");
+		var id = inputTag.value;
+		alert("ID : " + id);
+	}
+</script>
+</head>
+<body>
+		<p>내이름은 홍길동 입니다.<br> 별명은<i>의적</i>입니다.</p>
+		<p>내이름은 홍길순 입니다.<br> 별명은<i>의적2</i>입니다.</p>
+		<a href ="http://www.daum.net" id = "site">site로 이동</a><br>
+		아이디 : <input type = "text" id = "id">
+		<!-- <input type = "button" value= "아이디 추출" onclick = "clickBtn()"> -->
+		<button>아이디 추출</button>
+</body>
+</html>

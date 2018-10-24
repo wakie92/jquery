@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "lib/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		alert("ready");
+		$("a").hide();
+		$("a[target]").hide();
+		$('a[href = "http://www.naver.com"]').hide();
+	});
+
+</script>
+</head>
+<body>
+	<hr>
+		<a herf = "http://www.naver.com">네이버</a>
+		<a herf = "http://www.duam.net">다음</a>
+	<hr>
+</body>
+</html>

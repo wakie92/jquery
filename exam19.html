@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+	.red{
+		color : red;
+	}
+	
+	.blue{
+		color : blue;
+	}
+
+</style>
+<script>
+	$(document).ready(function(){
+		$("#btnRed").click(function(){
+			$("div*").addClass("red");
+		})
+		
+		$("#btnBlue").click(function(){
+			$("p*").addClass("blue");
+		})
+		
+		$("#btnClear").click(function(){
+			$("h1").removeClass("red");
+		})
+		
+		
+		$('#btnClear').click(function() {
+			$('h1').removeClass('red');
+		});
+
+		
+	});
+	
+	
+
+</script>
+</head>
+<body>
+	<div>
+		<h1> 나는 제목입니다.</h1>
+		<h2> 나는 제목3입니다.</h2>
+		<p> 나는 문단입니다.</p>
+		<div> 나는 구역입니다.</div>
+	</div>
+	<button id = "btnRed"> RED</button>
+	<button id = "btnBlue"> BLUE</button>
+	<button id = "btnClear"> REMOVE</button>
+</body>
+</html>

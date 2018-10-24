@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<style>
+	body *{
+		display : block;
+		padding : 10px;
+		margin : 10px;
+		border : 1px solid red;
+	}
+	
+
+</style>
+<script>
+	$(document).ready(function(){
+		
+		//$("h2").siblings().css("border-color", "blue");
+		//$("h2").siblings("h3").css("border-color", "blue");
+		//$("h2").next().css("border-color", "blue");
+		//$("h2").prev().css("border-color", "blue");
+		//$("h2").prevAll().css("border-color", "blue");
+		//$("h2").nextAll().css("border-color", "blue");
+		//$("h2").prevUntil("span").css("border-color", "blue");
+		//$("div > *").eq(2).css("border-color","blue");
+		//$("div > p").eq(2).css("border-color","blue");//eq는 뽑혀진 배열들중에 번지 정해주는것이다.
+		$("div > *").not('p').css("border-color","blue");
+		
+	});
+	
+
+</script>
+</head>
+<body>
+	<div>div01
+		<p>p1</p>
+		<span>span</span>
+		<h1>h1</h1>
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>p1-2</p>
+	</div>
+	<div>div02
+		<h2>h2</h2>
+		<h3>h3</h3>
+		<p>p2-1</p>
+	</div>
+</body>
+</html>

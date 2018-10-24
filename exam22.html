@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+	img {
+		width :200px;
+	}
+
+</style>
+<script  src ="lib/jquery-3.3.1.js"></script>
+<script>
+	$(document).ready(function(){
+		$(":button").click(function(){
+			//$("img").last().prependTo("body");
+			$("img").first().prependTo("body");
+			
+			//$("img").last().css("border","5px dotted green");
+			
+		})
+	})
+
+</script>
+</head>
+<body>
+	<img src = "img/다운로드.jpg">
+	<img src = "img/Koala.jpg">
+	<img src = "img/WIN_vista.jpg">
+	<img src = "img/Chrysanthemum.jpg"><br>
+	<button>클릭</button>
+</body>
+</html>

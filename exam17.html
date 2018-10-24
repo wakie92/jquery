@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src = "lib/jquery-3.3.1.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script>
+	$(document).ready(function(){
+		$("#btn01").click(function(){
+			
+		/* 	
+			var h1Tag = document.createElement("h1");
+			var text = document.createTextNode("세번째 문장");
+			h1Tag.appendChild(text);
+			var divTag = document.querySelector("div");
+			divTag.appendChild(h1Tag); 
+		*/
+			
+			$("div").append("<h1>세번째 문장</h1>");
+		})
+		
+		$("#btn02").click(function(){
+			$("ol").first().append("<li>노랑</li>");
+			//$("ol").prepend("<li>노랑</li>");
+	
+		})
+		
+		$("#btn03").click(function(){
+			$("body").last().prepend("<h4>문장을 추가함</h4>","<h5>또 문장을 추가함 </h5>","<h6>또 또문장을 추가함 </h6>");
+		
+			/* 위의 코드와 아래코드는 순서가 다르다. 확인해볼것.
+			$("body").prepend("<h4>문장을 추가함</h4>");
+			$("body").prepend("<h5>또 문장을 추가함 </h5>");
+			$("body").prepend("<h6>또 또문장을 추가함 </h6>");
+		 */	
+		});
+		
+		$("#btn04").click(function(){
+			$("h2").before("<hr>");			
+			$("h2").after("<hr>","<b>숫자로 표기</b>");			
+		});
+		
+		
+	})
+</script>
+</head>
+<body>
+<div>
+		<h1>첫번째 문장</h1>
+		<h1>두번째 문장</h1>
+		<!-- <h1>세번째 문장</h1> -->
+	</div>
+	<h2>색상표</h2>
+		<ol>
+			<li>빨강</li>
+			<li>노랑</li>
+			<li>초록</li>
+		</ol>
+	<button id="btn01">문장추가</button>	
+	<button id="btn02">색상추가</button>	
+	<button id="btn03">본문추가</button>	
+	<button id="btn04">내용추가</button>	
+</body>
+</html>

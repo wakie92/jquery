@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="lib/jquery-3.3.1.js"></script>
+<script>
+	function changeColor() {
+		$(this).css('color', 'orange');
+	}
+	$(document).ready(function() {
+
+		//자바스크립트 객체를 불러온다. key : value
+		//한개의 객체에 여러가지 속성값을 적용하고 싶으면 자바스크립트의 객체를 불러와 적용시킬수 있다.
+		$('input').on({
+			'keyup' : function() {
+				$(this).css("color", "orange");
+			},
+			"keydown" : function() {
+				$(this).css("color", "black");
+			},
+			"focus" : function() {
+				$(this).css({
+					"background-color" : "lightgray",
+					"border" : "2px solid red"
+				})
+			//$(this).css("background-color", "lightgray");
+			//$(this).css("border", "2px solid red");
+			},
+			"blur" : function() {
+				$(this).css({
+					"background-color" : "white",
+					"border" : "2px solid lightgray"
+				})
+			//$(this).css("background-color", "white");
+			//$(this).css("border", "2px solid lightgray");
+			}
+		});
+	
+		$(":button").click(function(){
+			alert("button click");
+			$("input").off("keyup","#input01");//input태그 중에서  특정한 id만 적용가능
+		})
+	});
+</script>
+</head>
+<body>
+	이름<input type="text" size="30" id = "input01">
+	<br>
+	전화번호<input type="text" size="30" id = "input02">
+	<button>keydown이벤트 제거</button>
+</body>
+</html>
